@@ -1,0 +1,30 @@
+<section>
+
+    <div class="wrapper">
+        <form action="#"
+              class="example-form">
+            <h2 class="titr">اطلاعات اولیه</h2>
+
+            <my-input *ngFor="let field of fields"
+                      [formControl]="field.formControl"
+                      [label]="field.label"
+                      [errorMessage]="field.errorMessage"
+                      [tooltip]="field.tooltip"
+                      [minlength]="field.minLength"
+                      [maxlength]="field.maxLength"
+                      [required]="field.required"
+                      [icon]="field.icon"
+                      [type]="field.type">
+            </my-input>
+
+            <button class="action"
+                    type="submit">ثبت نام</button>
+
+            <div class="other-action">
+                <p>ورود</p>
+                <p>تکرار کلمه عبور</p>
+            </div>
+
+        </form>
+    </div>
+</section>

@@ -1,0 +1,30 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+    height: 100%;
+}
+
+@import "https://fonts.googleapis.com/icon?family=Material+Icons";
+
+body {
+    margin: 0;
+    font-family: 'B Nazanin', "Helvetica Neue", sans-serif;
+    direction: rtl;
+    text-align: right;
+}
+
+
+
+.mat-mdc-text-field-wrapper {
+    background-color: white !important;
+    // background-color: transparent !important;
+}
+
+// mat-label {
+//     color: rgb(209, 209, 209);
+// }
+
+.mat-form-field-label mat-label {
+    pointer-events: auto;
+ }

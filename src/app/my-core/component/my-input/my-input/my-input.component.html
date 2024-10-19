@@ -1,0 +1,48 @@
+<!-- input not password -begin -->
+
+<mat-form-field *ngIf="type != 'password'"
+                class="example-full-width"
+                [matTooltipClass]="'right'"
+                [matTooltip]="tooltip"
+                matTooltipPosition="left">
+    <mat-label>{{label}}</mat-label>
+    <input matInput
+           [formControl]="formControl"
+           minlength="minlength"
+           maxlength="maxlength"
+           required="required"
+           [type]="type">
+    <mat-icon *ngIf="icon"
+              matSuffix>{{icon}}</mat-icon>
+    @if (formControl.hasError('required')) {
+    <mat-error><strong>{{errorMessage}}</strong></mat-error>
+    }
+
+</mat-form-field>
+
+<!-- input not password -end -->
+
+
+<!-- input password -begin -->
+
+<mat-form-field *ngIf="type == 'password'"
+                class="example-full-width"
+                [matTooltipClass]="'right'"
+                [matTooltip]="tooltip"
+                matTooltipPosition="left">
+    <mat-label>{{label}}</mat-label>
+    <input matInput
+           [formControl]="formControl"
+           minlength="minlength"
+           maxlength="maxlength"
+           required="required"
+           [type]="hide ? 'password' : 'text'">
+    <mat-icon matSuffix
+              (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+    @if (formControl.hasError('required')) {
+    <mat-error><strong>{{errorMessage}}</strong></mat-error>
+    }
+
+</mat-form-field>
+
+<!-- input password -end -->
